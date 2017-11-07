@@ -1,0 +1,32 @@
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<body>
+<h4>List of the calls start time, ANI, DNIS, and duration for all outbound calls to Minnesota for
+a given company today.</h4>
+<table class="table table-striped" border = '1px'>
+                <thead>
+<tr>
+<th>calldate</th>
+<th>ani</th>
+<th>dnis</th>
+<th>duration</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="calls1 : ${callslist}">
+
+<td th:text="${calls1[0]}"></td>
+<td th:text="${calls1[1]}"></td>
+<td th:text="${calls1[2]}"></td>
+<td th:text="${calls1[3]}"></td>
+
+
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>

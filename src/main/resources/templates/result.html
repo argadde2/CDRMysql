@@ -1,0 +1,30 @@
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Home</title>
+</head>
+<body>
+<h4>
+  Monthly billable minutes of outbound calling for the company for the last 6 months.
+</h4>
+
+<table class="table table-striped" border = '2px'>
+                <thead>
+<tr>
+<th>Month</th>
+<th>Minutes</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="record : ${monthlist}">
+
+<td th:text="${record[0]}"></td>
+<td th:text="${record[1]}"></td>
+
+</tr>
+</tbody>
+</table>
+</body>
+</html> 

@@ -1,0 +1,55 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h4>Daily average time-to-answer for all companies in the last 30 days</h4>
+
+<table class="table table-striped" border = '1px' padding = '2px'>
+                <thead>
+<tr>
+<th>Date</th>
+<th>TimetoAnswer</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="month1 : ${averagelist}">
+
+<td th:text="${month1[0]}"></td>
+<td th:text="${month1[1]}"></td>
+
+</tr>
+</tbody>
+</table>
+
+
+ 
+<div>
+<h4>monthly billable minutes of outbound calling for a given company for the last
+6 months. </h4>
+	<h4>Enter company name </h4>
+    
+    	<form name= "companyname" action = "companyname" method = "POST">
+    <input type="text" name = "company1"/>
+    <input type="submit" class = "btn"/>
+    	</form>
+        
+      
+ </div> 
+   
+   <div>
+<h4>List the call’s start time, ANI, DNIS, and duration for all outbound calls to Minnesota for
+a given company within a specific time range. </h4>
+	<h4>Enter company name </h4>
+    
+    	<form name= "companycall" action = "companycall" method = "POST">
+    <input type="text" name = "company2"/>
+    <input type="submit" class = "btn"/>
+    	</form>
+        
+      
+ </div> 
+    
+</body>
+</html>
